@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <title>Flashing Past</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous">
+    <title>Cartoon Games</title>
     <style>
         @media(max-width: 500px) {
             header {
@@ -11,8 +12,13 @@
 
         }
 
+        html {
+            font-family: 'righteous', serif;
+        }
+
         header {
             align-self: center;
+            font-family: 'righteous', serif;
             text-align: center;
             font-style: italic;
             background-color: rgba(0, 0, 0, 0.904);
@@ -47,10 +53,6 @@
             border: 20px;
         }
 
-        table,
-        {
-
-        }
 
         header,
         h1 {
@@ -83,7 +85,7 @@
             padding: 30px;
             text-align: center;
             height: 80px;
-            background-color: rgba(255, 0, 0, 0.904);
+            background-color: rgba(0, 0, 0, 0.904);
             margin-bottom: 1px;
             font-style: italic;
             font-style: oblique;
@@ -92,7 +94,7 @@
 
         footer,
         h3 {
-            color: rgb(253, 253, 46);
+            color: rgb(255, 255, 255);
             text-shadow: 6px;
         }
     </style>
@@ -100,6 +102,7 @@
         <H1>Cartoon Network<h1></h1> <!--<img src="./Project/Past.png" width="390px" height="150"-->
             <nav>
                 <ul>
+                    <li><a href="./Proyecto.html">Index</a></li>
                     <li>All games</li>
                     <li>Categories</li>
                     <li>Tags</li>
@@ -108,24 +111,105 @@
     </Header>
 </head>
 <script>
-    let n = prompt("ingrese nombre")
-    console.log(n);
-    let mensaje = "Hi " + n;
-    alert(mensaje)
+
 </script>
 
-<body background=" ./project/Ground.png">
+<body>
 
-    <main>
-        <div class="grid">
-            <section>
-                <table>
-                <td>
-                 </td>
-                </table>
-            </section>
+    <div class="navbar">
+    </div>
+    <div class="content">
+        <div class="search">
+            <div class="common-header">Search</div>
+            <div class="search-fields">
+            </div>
+            <table class="search-table">
+                <tr>
+                    <td><button>X</button>Smart Search:</td>
+                    <td><input id="smartSearch"></td>
+                </tr>
+            </table>
+            <input type="checkbox" id="any"> <label for="any">Match any</label>
+
+            <button class="search-button">Search</button>
         </div>
-    </main>
+        <div class="results">
+            <div class="common-header">Results</div>
+            <div class="common-loading" hidden="">
+                <div>
+                    <div></div>
+                </div>
+                Loading...
+            </div>
+            <div class="results-top" style="display: flex;">
+                <div class="results-count">
+                    Got <span class="results-total">0</span> results <span class="results-per-page">(100 per
+                        page)</span>
+                </div>
+                <div class="results-sort">
+                    Sort:
+                    <select class="results-sort-options">
+                        <option value="title" selected="selected">Title</option>
+                        <option value="creator">Creator</option>
+                        <option value="platform">Platform</option>
+                        <option value="dateAdded">Date Added</option>
+                        <option value="dateModified">Date Modified</option>
+                        <option value="random">Random</option>
+                    </select>
+                    <select class="results-sort-direction">
+                        <option selected="selected">Ascending</option>
+                        <option>Descending</option>
+                    </select>
+                </div>
+                <div class="results-navigate" hidden="">
+                    <button class="results-first-page">&lt;&lt;</button>
+                    <button class="results-back-page">&lt;</button>
+                    <span class="results-current-page">1</span> / <span class="results-max-pages">0</span>
+                    <button class="results-forward-page">&gt;</button>
+                    <button class="results-last-page">&gt;&gt;</button>
+
+                    <input type="text" placeholder="#" class="results-input-page">
+                    <button class="results-go-to-page">Go</button>
+                </div>
+                <div class="results-compact">
+                    <input type="checkbox" id="compact"> <label for="compact">Compact View</label>
+                </div>
+            </div>
+            <div class="results-list"></div>
+            <div class="results-bottom results-navigate" hidden="">
+                <button class="results-first-page">&lt;&lt;</button>
+                <button class="results-back-page">&lt;</button>
+                <span class="results-current-page">1</span> / <span class="results-max-pages">0</span>
+                <button class="results-forward-page">&gt;</button>
+                <button class="results-last-page">&gt;&gt;</button>
+
+                <input type="text" placeholder="#" class="results-input-page">
+                <button class="results-go-to-page">Go</button>
+            </div>
+            <div class="viewer common-center" style="display:none">
+                <div class="viewer-header">
+                    <div class="viewer-back common-activate">&lt; Back to Results</div>
+                    <a class="viewer-play" target="_blank">Play at 9o3o</a>
+                </div>
+
+                <div class="common-subheader">Images</div>
+                <div class="viewer-images">
+                    <fieldset class="viewer-logo">
+                        <legend>Logo</legend>
+                        <a target="_blank"><img></a>
+                    </fieldset>
+                    <fieldset class="viewer-screenshot">
+                        <legend>Screenshot</legend>
+                        <a target="_blank"><img></a>
+                    </fieldset>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    
     <Footer>
         <h2>Flashing Past Nostalgia</h2>
     </Footer>
