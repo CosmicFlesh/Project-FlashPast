@@ -126,9 +126,28 @@
         }
 
         .sitios {
-            align-self: center;
+            align-self: relative;
+            height: 500px;
         }
-        .carrusel{
+
+        .sitios,
+        h2 {
+            align-content: center;
+            height: 500px;
+        }
+
+        .tags {
+            align-self: relative;
+            height: 500px;
+        }
+
+        .tags,
+        h3 {
+            align-content: center;
+            height: 500px;
+        }
+
+        .carrusel {
             align-self: center;
         }
 
@@ -143,12 +162,65 @@
                 height: auto;
             }
         }
+
+        .carousel-container {
+            width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #000;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-image {
+            min-width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .carousel-button {
+            position: absolute;
+            padding-top: 200px;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
     </style>
 
 </head>
 <script>
     let n = prompt("Enter Name")
     alert("Hi " + n)
+
+
+
+    const track = document.getElementById('carouselTrack');
+    let index = 0;
+
+    function moveSlide(direction) {
+        const slides = document.querySelectorAll('.carousel-image');
+        index = (index + direction + slides.length) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+
 </script>
 
 <body>
@@ -158,7 +230,7 @@
         </a>
         <nav>
             <ul>
-                <li><a href="./Proyecto.html">Index</a></li>
+                <li><a href="./Index.html">Index</a></li>
                 <li><a href="./Proyecto.html">Sitios</a></li>
                 <li><a href="./Proyecto.html">Categorias</a></li>
                 <li><a href="./Proyecto.html">Tags</a></li>
@@ -166,9 +238,22 @@
         </nav>
     </header>
 
+    <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+            <img class="carousel-image"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpm1.narvii.com%2F7207%2F66c01dd99f2d894e71077b557c164f6410c2017ar1-1280-720v2_hq.jpg&f=1&nofb=1&ipt=86319d09928415700ebc03c086e8f6fec4984ad4226d2f33685667c5d0b518d6x">
+            <img class="carousel-image"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fuv7kP1Lw118%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=45cb845bc7a4507ca08461842ab01281927113227194e3007f11eb5f4e31cdc4">
+            <img class="carousel-image"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FwzXDNVJBFgw%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=fe0e7910bd3c69bb2e38d389f4a1d19fe4b50bbc4e2d6b947f962f63b6283e3b">
+        </div>
+        <button class="carousel-button prev" onclick="moveSlide(-1)">⟨</button>
+        <button class="carousel-button next" onclick="moveSlide(1)">⟩</button>
+    </div>
+
     <main>
-        <div >
-         <img class="carrusel" src="./carrusel1.png" width="500px" >   
+        <div>
+            <!--img class="carrusel" src="./carrusel1.png" width="500px" -->
         </div>
         <hr>
         <hr>
@@ -210,72 +295,17 @@
         <hr>
         <div class="sitios">
             <h2>Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
-                Lugar para dejar los sitios de los juegos
+
             </h2>
         </div>
         <hr>
         <hr>
         <hr>
         <hr>
-        <div>
+        <div class="tags">
             <h3>
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-            Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-           Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags  Lugar para los links de los tags 
-        </h3>
+                Lugar para los links de los tags
+            </h3>
         </div>
     </main>
 
