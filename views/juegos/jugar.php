@@ -10,7 +10,7 @@ if (!$juego) {
     die("Juego no encontrado.");
 }
 
-$urlJuego = htmlspecialchars($juego['url']);
+$urlJuego = htmlspecialchars($juego['rutajuego']);
 $nombreJuego = htmlspecialchars($juego['nombre']);
 ?>
 <!DOCTYPE html>

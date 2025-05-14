@@ -124,6 +124,16 @@ $recientes = $stmt->fetchAll();
             transition: transform 0.2s;
         }
 
+        .recientes {
+            align-self: center;
+            justify-content: center;
+        }
+        .reci{
+             align-self: center;
+            justify-self: center;
+            flex: content;
+        }
+
         .bysite img {
             width: 100%;
             max-width: 400px;
@@ -200,9 +210,9 @@ $recientes = $stmt->fetchAll();
         <nav>
             <ul>
                 <li><a href="./index.php">Index</a></li>
-                <li><a href="./Proyecto.html">Categorías</a></li>
+                <li><a href="./views/juegos/juegos.php">juegos</a></li>
                 <li><a href="./Proyecto.html">Tags</a></li>
-                <li><a href="./view/admin/adcrearjuego.php">upload</a></li>
+                <li><a href="./views/admin/adcrearjuego.php">upload</a></li>
             </ul>
         </nav>
     </header>
@@ -219,8 +229,8 @@ $recientes = $stmt->fetchAll();
     </div>
     <hr>
     <main>
-        <h2>Juegos recientes</h2>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <h2 class="reci">Juegos recientes</h2>
+        <div class="recientes" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <?php foreach ($recientes as $juego): ?>
                 <div style="width: 200px; border: 1px solid #ccc; padding: 10px; border-radius: 5px;">
                     <img src="<?= $juego['imagen'] ?>" alt="Imagen de <?= htmlspecialchars($juego['nombre']) ?>" style="width: 100%; height: auto;"><br>
@@ -229,36 +239,27 @@ $recientes = $stmt->fetchAll();
                 </div>
             <?php endforeach; ?>
         </div>
-        <section class="bysite">
-            <a href="./CNGames.html">
-                <img src="https://static.wikia.nocookie.net/logopedia/images/2/27/Cartoon_Network_1992.svg/revision/latest?cb=20210722145254" alt="Cartoon Network">
-                <p class="site">Cartoon Network Games</p>
-            </a>
-            <a href="./CNGames.html">
-                <img src="https://static.wikia.nocookie.net/logopedia/images/2/27/Cartoon_Network_1992.svg/revision/latest?cb=20210722145254" alt="Cartoon Network">
-                <p class="site">Cartoon Network Games</p>
-            </a>
-            <a href="./CNGames.html">
-                <img src="https://static.wikia.nocookie.net/logopedia/images/2/27/Cartoon_Network_1992.svg/revision/latest?cb=20210722145254" alt="Cartoon Network">
-                <p class="site">Cartoon Network Games</p>
-            </a>
-            <a href="./CNGames.html">
-                <img src="https://static.wikia.nocookie.net/logopedia/images/2/27/Cartoon_Network_1992.svg/revision/latest?cb=20210722145254" alt="Cartoon Network">
-                <p class="site">Cartoon Network Games</p>
-            </a>
-        </section>
         <hr>
-        <section class="section_sitios">
-            <h2>Lugar para dejar los sitios de los juegos</h2>
+        <section class="bysite">
+            <a href="./views/juegos/juegos.php">
+                <img src="./views/admin/img/Cartoon_Network_1992.svg" alt="Cartoon Network">
+                <p class="site">Cartoon Network Games</p>
+            </a>
+            <a href="./views/juegos/juegos.php">
+                <img src="./views/admin/img/icon-384435334.png">
+                <p class="site">ArmorGames</p>
+            </a>
+
         </section>
+
         <hr>
         <section class="section_tags">
-            <h3>Lugar para los links de los tags</h3>
+            <h3>se complicaron mucho los tags :(</h3>
         </section>
     </main>
 
     <footer>
-        <h2>Flashing Past Nostalgia</h2>
+        <h2>2025 Flashing Past</h2>
     </footer>
 
     <script>
@@ -273,6 +274,7 @@ $recientes = $stmt->fetchAll();
 
         setInterval(showNextSlide, 3000);
     </script>
+
 </body>
 
 </html>
