@@ -235,7 +235,7 @@ $recientes = $stmt->fetchAll();
                 <div style="width: 200px; border: 1px solid #ccc; padding: 10px; border-radius: 5px;">
                     <img src="<?= $juego['imagen'] ?>" alt="Imagen de <?= htmlspecialchars($juego['nombre']) ?>" style="width: 100%; height: auto;"><br>
                     <strong><?= htmlspecialchars($juego['nombre']) ?></strong><br>
-                    <a href="#juego-<?= $juego['id'] ?>">Ver juego</a>
+                    <a href="/abprogra/views/juegos/jugar.php?id=<?= $juego['id'] ?>">Ver juego</a>
                 </div>
             <?php endforeach; ?>
         </div>
