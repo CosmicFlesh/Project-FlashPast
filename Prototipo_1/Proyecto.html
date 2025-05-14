@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flashing Past</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<script>
+    let n = prompt("Enter Name")
+    alert("Hi " + n)
+
+
+
+    const track = document.getElementById('carouselTrack');
+    let index = 0;
+
+    function moveSlide(direction) {
+        const slides = document.querySelectorAll('.carousel-image');
+        index = (index + direction + slides.length) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+
+</script>
+
+<body>
+    <header>
+        <a href="./Proyecto.html">
+            <img src="./flash.png" width="390px" height="50">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="./Search.html">Index</a></li>
+                <li><a href="./Proyecto.html">Sitios</a></li>
+                <li><a href="./Proyecto.html">Categorias</a></li>
+                <li><a href="./Proyecto.html">Tags</a></li>
+                <li><a href="./Proyecto.html">log in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+            <img class="carousel-image"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpm1.narvii.com%2F7207%2F66c01dd99f2d894e71077b557c164f6410c2017ar1-1280-720v2_hq.jpg&f=1&nofb=1&ipt=86319d09928415700ebc03c086e8f6fec4984ad4226d2f33685667c5d0b518d6x">
+            <img class="carousel-image"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fuv7kP1Lw118%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=45cb845bc7a4507ca08461842ab01281927113227194e3007f11eb5f4e31cdc4">
+            <img class="carousel-image"
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FwzXDNVJBFgw%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=fe0e7910bd3c69bb2e38d389f4a1d19fe4b50bbc4e2d6b947f962f63b6283e3b">
+        </div>
+        <button class="carousel-button prev" onclick="moveSlide(-1)">⟨</button>
+        <button class="carousel-button next" onclick="moveSlide(1)">⟩</button>
+    </div>
+
+    <main>
+        <div>
+            <!--img class="carrusel" src="./carrusel1.png" width="500px" -->
+        </div>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <div class="bysite">
+            <div class="Cartoon Network">
+                <a ID="Cartoon" href="./CNGames.html">
+                    <img src="https://static.wikia.nocookie.net/logopedia/images/2/27/Cartoon_Network_1992.svg/revision/latest?cb=20210722145254"
+                        width="350px" height="100">
+                    <p class="site"> Cartoon Network Games</p>
+                </a>
+            </div>
+            <div class="Cartoon Network">
+                <a ID="Cartoon" href="./CNGames.html">
+                    <img src="https://static.wikia.nocookie.net/logopedia/images/2/27/Cartoon_Network_1992.svg/revision/latest?cb=20210722145254"
+                        width="350px" height="100">
+                    <p class="site"> Cartoon Network Games</p>
+                </a>
+            </div>
+            <div class="Cartoon Network">
+                <a ID="Cartoon" href="./CNGames.html">
+                    <img src="https://static.wikia.nocookie.net/logopedia/images/2/27/Cartoon_Network_1992.svg/revision/latest?cb=20210722145254"
+                        width="350px" height="100">
+                    <p class="site"> Cartoon Network Games</p>
+                </a>
+            </div>
+            <div class="Cartoon Network">
+                <a ID="Cartoon" href="./CNGames.html">
+                    <img src="https://static.wikia.nocookie.net/logopedia/images/2/27/Cartoon_Network_1992.svg/revision/latest?cb=20210722145254"
+                        width="350px" height="100">
+                    <p class="site"> Cartoon Network Games</p>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <div class="sitios">
+            <h2>Lugar para dejar los sitios de los juegos
+
+            </h2>
+        </div>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <div class="tags">
+            <h3>
+                Lugar para los links de los tags
+            </h3>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Flashing Past Nostalgia</h2>
+    </footer>
+
+</body>
+<!-- https://github.com/FlashpointProject/flashpoint-database-api para mas tarde-->

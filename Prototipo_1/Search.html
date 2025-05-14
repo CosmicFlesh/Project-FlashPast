@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Juegos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      margin-bottom: 20px;
+    }
+
+    .search-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .search-bar input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .search-bar button {
+      padding: 8px 12px;
+      border: none;
+      background-color: #3498db;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .filters {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .filters label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .game-card {
+      background-color: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .pagination {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .pagination button {
+      padding: 6px 10px;
+      border: none;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .pagination button.active {
+      background-color: #3498db;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Catálogo de Juegos</h1>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar juego...">
+    <button>Buscar</button>
+    <button>Agregar Filtro</button>
+  </div>
+
+  <div class="filters">
+    <label><input type="checkbox"> Filtrar NSFW</label>
+    <label><input type="checkbox"> Coincidir cualquiera</label>
+    <label><input type="checkbox"> Paginación</label>
+  </div>
+
+  <div class="results">
+    <!-- Aquí se mostrarán las tarjetas de juegos -->
+    <div class="game-card">
+      <h3>Nombre del Juego</h3>
+      <p>Descripción breve del juego.</p>
+    </div>
+    <!-- Más tarjetas de juegos -->
+  </div>
+
+  <div class="pagination">
+    <button>&laquo;</button>
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>&raquo;</button>
+  </div>
+
+</body>
+</html>
