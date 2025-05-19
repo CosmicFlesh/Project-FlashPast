@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=flash", "root", "");
+include ("conexion.php");
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 $stmt = $pdo->prepare("SELECT * FROM juegos WHERE id = ?");

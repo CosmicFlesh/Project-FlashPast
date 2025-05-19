@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=flash", "root", "");
+include ("conexion.php");;
+//$pdo = new PDO("mysql:host=localhost;dbname=flash", "root", "");
 
 $stmt = $pdo->query("SELECT * FROM juegos ORDER BY fechasubi DESC LIMIT 3");
 $recientes = $stmt->fetchAll();

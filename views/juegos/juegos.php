@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=flash", "root", "");
+include ("conexion.php");
 
 // Eliminar juego
 if (isset($_GET['eliminar'])) {

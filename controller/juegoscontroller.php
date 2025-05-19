@@ -5,9 +5,9 @@ class juegoscontroller{
 
    
  public function mostrarTodos(){
-    $usuario = new usuario(); //instancia clase usuario
-    $usuarios = $usuario->mostrarTodos();//llamamos al metodo obtener todos
-    $contenido = '../Views/usuario/listarusuarios.php';//creamos variable llamada contenido
+    $juego = new juegos(); //instancia clase juegos
+    $juegos = $juego->mostrarTodos();//llamamos al metodo obtener todos
+    $contenido = '../Views/juegos/listarjuegos.php';//creamos variable llamada contenido
     require '../Views/admin/Plantilla';//incluimos la plantilla
 
  }

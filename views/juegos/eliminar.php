@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-$pdo = new PDO("mysql:host=localhost;dbname=flash", "root", "");
+include ("conexion.php");
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
